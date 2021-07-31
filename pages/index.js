@@ -1,7 +1,10 @@
 import Head from 'next/head'
+import { useStateContext } from '../components/HBOProvider'
 
 
 export default function Home() {
+  const globalState = useStateContext();
+
   return (
     <div>
       <div className="login-user">
@@ -15,7 +18,7 @@ export default function Home() {
         <div className="login-user__form">
           <div className="login-user__user-box">
             <img className="login-user__user-img" src="https://uifaces.co/our-content/donated/vIqzOHXj.jpg" />
-            <div className="login-user__user-name">Bryant</div>
+            <div className="login-user__user-name">{globalState.test}</div>
           </div>
         </div>
         <div className="login-user__buttons">
