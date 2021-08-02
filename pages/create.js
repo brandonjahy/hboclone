@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import { useStateContext } from '../components/HBOProvider';
+import ls from 'local-storage'
+import {v4} from 'uuid'
 
 
 export default function CreateUser() {
   const globalState = useStateContext();
+  ls('name')
   return (
     <div>
       <div className="create-user">
